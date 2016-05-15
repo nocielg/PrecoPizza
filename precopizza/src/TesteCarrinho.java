@@ -4,9 +4,6 @@ import org.junit.Test;
 
 
 public class TesteCarrinho {
-
-	
-	
 	
 	@Test
 	public void testandoAdicaoSemIngrediente() {
@@ -31,7 +28,7 @@ public class TesteCarrinho {
 		pizza2.adicionaIngrediente("presunto");
 		pizza2.getPreco();
 		
-		assertEquals(35, Pizza.precofinalpizzas);
+		assertEquals(55, Pizza.precofinalpizzas);
 	}
 
 }
