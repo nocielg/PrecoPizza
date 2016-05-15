@@ -20,6 +20,10 @@ public int presunto;
 public int azeitona;
 public int ingredientesdessapizza;
 
+// Calculando preço final de todas as pizzas
+public static int precofinalpizzas = 0;
+
+
 
 	public void adicionaIngrediente(String ingrediente){
 		listaIngredientes.add(ingrediente);
@@ -54,17 +58,25 @@ public int ingredientesdessapizza;
 	public int getPreco(){
 		int tamanhoLista = listaIngredientes.size();
 		if(tamanhoLista<=2){
+			precofinalpizzas += 15;
 			return 15;
+			
 		}
 		else if (tamanhoLista >2 && tamanhoLista<=5){
+			precofinalpizzas += 20;
 			return 20;
 		}
 		else
+			precofinalpizzas += 23;
 			return 23;
 	}
 	
 	public static void contabilizaIngrediente(){
 		contaIngredientes += 1;
+	}
+	
+	public static void zeraRegistro(){
+		contaIngredientes = 0;
 	}
 	
 }
