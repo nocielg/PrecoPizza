@@ -5,78 +5,113 @@ import java.util.Map;
 
 
 public class Pizza {
-
+/*	
 // Variável estática responsável por armazenar o número total de ingredientes usados para todas as pizzas
 public static int contaIngredientes = 0;
 // Lista responsável por armazenar o número de ingredientes
 List<String> listaIngredientes = new ArrayList<String>();
 // Total de ingredientes usados para essa pizza
 
-public int tomate;
-public int chocolate;
-public int queijo;
-public int ovo;
-public int presunto;
-public int azeitona;
+
 public int ingredientesdessapizza;
 
 // Calculando preço final de todas as pizzas
-public static int precofinalpizzas = 0;
 
 
+*/
+	
+//public int tomate;
+//public int chocolate;
+//public int queijo;
+//public int ovo;
+//public int presunto;
+//public int azeitona;
+//public int valor = 0;
+//public static int precofinalpizzas = 0;
+public static int contaIngredientes = 0;	
 
+// Criando a tabela hash para armazenar os ingredientes da pizza
+Map<String,Integer> listaIngrediente = new HashMap<String, Integer>();
+	private int auxiliarValorElemento = 0;
+	
+//Método para adicionar ingredientes na tabela hash contabilizando a quantidade dos mesmos	
 	public void adicionaIngrediente(String ingrediente){
-		listaIngredientes.add(ingrediente);
-		
-		contabilizaIngrediente();
-		if (ingrediente == "chocolate"){
+		if (listaIngrediente.containsKey(ingrediente)){
+			auxiliarValorElemento = listaIngrediente.get(ingrediente);
+			auxiliarValorElemento ++;
+			listaIngrediente.put(ingrediente, auxiliarValorElemento);
+			contabilizaIngrediente();
+		}
+		else{
+			listaIngrediente.put(ingrediente, 1);
+			contabilizaIngrediente();
+		}
+	}
+		//contabilizaIngrediente();
+		/*if (ingrediente == "chocolate"){
 			chocolate++;
-			ingredientesdessapizza++;
+			listaIngrediente.put("chocolate", chocolate);
 		}
 		else if(ingrediente == "queijo"){
 			queijo++;
-			ingredientesdessapizza++;
+			listaIngrediente.put("queijo", queijo++);
 		}
 		else if(ingrediente == "tomate"){
 			tomate++;
-			ingredientesdessapizza++;
+			listaIngrediente.put("tomate", tomate++);
 		}
 		else if(ingrediente == "ovo"){
 			ovo++;
-			ingredientesdessapizza++;
+			listaIngrediente.put("ovo", ovo++);
 		}
 		else if(ingrediente == "presunto"){
 			presunto++;
-			ingredientesdessapizza++;
+			listaIngrediente.put("presunto", presunto++);
 		}
 		else{
 			azeitona++;
-			ingredientesdessapizza++;
+			listaIngrediente.put("azeitona", azeitona);
 		}
 	}
 	
-	public int getPreco(){
-		int tamanhoLista = listaIngredientes.size();
-		if(tamanhoLista<=2){
-			precofinalpizzas += 15;
-			return 15;
-			
-		}
-		else if (tamanhoLista >2 && tamanhoLista<=5){
-			precofinalpizzas += 20;
-			return 20;
-		}
-		else
-			precofinalpizzas += 23;
-			return 23;
-	}
 	
-	public static void contabilizaIngrediente(){
-		contaIngredientes += 1;
-	}
+	
+	
 	
 	public static void zeraRegistro(){
 		contaIngredientes = 0;
+	}*/
+
+	//Método para contabilizar o preço da pizza
+	public int getPreco(){
+		
+		int numeroIngredientes = 0; 
+		//Iterando a tabela hash para contabilizar o número de ingredientes em cada tipo de ingrediente.
+		for(Map.Entry<String, Integer> par: listaIngrediente.entrySet()){
+			numeroIngredientes = numeroIngredientes + par.getValue();
+		}
+		
+		if(numeroIngredientes<=2){
+			
+			return 15;
+			
+		}
+		else if (numeroIngredientes >2 && numeroIngredientes<=5){
+			
+			return 20;
+		}
+		else if (numeroIngredientes>5){
+			
+			return 23;
+		}
+		else
+			return 0;
+	}
+	
+	//Método para contabilizar o número de ingrediente em todas as pizzas
+	public static int contabilizaIngrediente(){
+		contaIngredientes ++;
+		return contaIngredientes;
 	}
 	
 }

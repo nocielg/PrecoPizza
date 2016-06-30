@@ -1,10 +1,33 @@
 
-public class Main {
+public class Principal {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+	//Criando as pizzas
+	Pizza pizza1 = new Pizza();
+	pizza1.adicionaIngrediente("azeitona");
+	pizza1.adicionaIngrediente("tomate");
+	pizza1.adicionaIngrediente("queijo");
+	
+	Pizza pizza2 = new Pizza();
+	pizza2.adicionaIngrediente("presunto");
+	pizza2.adicionaIngrediente("chocolate");
+	
+	Pizza pizza3 = new Pizza();
+	pizza3.adicionaIngrediente("requeijao");
+	
+	//Adicionando as pizzas no carrinho de compra
+	CarrinhodeCompras carrinho = new CarrinhodeCompras();
+	carrinho.adicionaPizzaNoCarrinho(pizza1);
+	carrinho.adicionaPizzaNoCarrinho(pizza2);
+	carrinho.adicionaPizzaNoCarrinho(pizza3);
+	
+	//Imprimindo o número de pizzas no carrinho e o valor total das mesmas
+	}
+	/*
+	 * 
 		// TODO Auto-generated method stub
 		Pizza pizza = new Pizza();
 		CarrinhodeCompras carrinho = new CarrinhodeCompras(pizza);
@@ -42,5 +65,5 @@ public class Main {
 		System.out.println("A pizza 3 foi feita com "+ pizza3.azeitona +" azeitonas");
 		
 			}
-
+*/
 }

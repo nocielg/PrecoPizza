@@ -12,7 +12,7 @@ public class TestePizza {
 		
 	@BeforeClass
 	public static void inicializandoTestes(){
-		Pizza.zeraRegistro();
+		//Pizza.zeraRegistro();
 	}
 		
 	@Test
