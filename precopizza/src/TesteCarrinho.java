@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ public class TesteCarrinho {
 	
 	@Test
 	public void testandoAdicaoSemIngrediente() {
-		Pizza pizza = new Pizza();
+	//	Pizza pizza = new Pizza();
 		//assertEquals(0, pizza.ingredientesdessapizza);
 		//CarrinhodeCompras carrinhodecompras = new CarrinhodeCompras(pizza);
 		

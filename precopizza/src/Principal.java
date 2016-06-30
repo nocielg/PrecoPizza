@@ -18,52 +18,22 @@ public class Principal {
 	Pizza pizza3 = new Pizza();
 	pizza3.adicionaIngrediente("requeijao");
 	
+	
 	//Adicionando as pizzas no carrinho de compra
 	CarrinhodeCompras carrinho = new CarrinhodeCompras();
 	carrinho.adicionaPizzaNoCarrinho(pizza1);
 	carrinho.adicionaPizzaNoCarrinho(pizza2);
 	carrinho.adicionaPizzaNoCarrinho(pizza3);
-	
+		
 	//Imprimindo o número de pizzas no carrinho e o valor total das mesmas
+	System.out.printf("O preço total das pizzas no carrinho é %d",carrinho.retornaValorTotalPrecoPizzasCarrinho());
+	System.out.printf("O numero de pizzas no carrinho é %d", carrinho.retornaNumeroPizzasCarrinho());
+	
+	
+	//Imrimindo a quantidade de ingredientes utilizada para cada pizza.
+	System.out.printf("Na pizza 1 foram utilizados %d", pizza1.getIngredienteCadaPizza());
+	System.out.printf("Na pizza 2 foram utilizados %d", pizza2.getIngredienteCadaPizza());
+	System.out.printf("Na pizza 3 foram utilizados %d", pizza3.getIngredienteCadaPizza());
 	}
-	/*
-	 * 
-		// TODO Auto-generated method stub
-		Pizza pizza = new Pizza();
-		CarrinhodeCompras carrinho = new CarrinhodeCompras(pizza);
-		
-		//Pizza1
-		Pizza pizza1 = new Pizza();
-		carrinho.adicionaPizza();
-		pizza1.adicionaIngrediente("chocolate");
-		pizza1.adicionaIngrediente("tomate");
-		pizza1.adicionaIngrediente("tomate");
-		pizza1.adicionaIngrediente("tomate");
-		pizza1.adicionaIngrediente("tomate");
-		pizza1.adicionaIngrediente("tomate");
-		
-		//
-		
-		Pizza pizza2 = new Pizza();
-		carrinho.adicionaPizza();
-		//pizza2.adicionaIngrediente("queijo");
-		
-		//Pizza3
-		Pizza pizza3 = new Pizza();
-		carrinho.adicionaPizza();
-		pizza3.adicionaIngrediente("ovo");
-		pizza3.adicionaIngrediente("ovo");
-		pizza3.adicionaIngrediente("ovo");
-		pizza3.adicionaIngrediente("presunto");
-		pizza3.adicionaIngrediente("azeitona");
-		
-		System.out.println(" O total de pizzas adicionadas no carrinho é "+ carrinho.contaPizza);
-		System.out.println("A pizza 1 foi feita com "+ pizza1.tomate +" tomates");
-		System.out.println("A pizza 2 foi feita com "+ pizza2.queijo +" queijos");
-		System.out.println("A pizza 3 foi feita com "+ pizza3.ovo +" ovos");
-		System.out.println("A pizza 3 foi feita com "+ pizza3.presunto +" presuntos");
-		System.out.println("A pizza 3 foi feita com "+ pizza3.azeitona +" azeitonas");
-		
-			}
-*/
+	
 }
