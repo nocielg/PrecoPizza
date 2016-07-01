@@ -35,8 +35,8 @@ public class Principal {
 	
 	//Imrimindo a quantidade de ingredientes utilizada para cada pizza.
 	System.out.printf("A quantidade de ingredientes utilizada na pizza 1 foi: %d", pizza1.getIngredienteCadaPizza());
-	System.out.printf("A quantidade de ingredientes utilizada na pizza 1 foi:", pizza2.getIngredienteCadaPizza());
-	System.out.printf("A quantidade de ingredientes utilizada na pizza 1 foi:", pizza3.getIngredienteCadaPizza());
+	System.out.printf("A quantidade de ingredientes utilizada na pizza 2 foi: %d", pizza2.getIngredienteCadaPizza());
+	System.out.printf("A quantidade de ingredientes utilizada na pizza 3 foi: %d", pizza3.getIngredienteCadaPizza());
 	System.out.println("O total de ingredientes utilizados nas pizzas foi de:" + Pizza.contaIngredientesTodasPizzas);
 	for (Map.Entry<String, Integer> entry : Pizza.listaIngrediente.entrySet()){
 		System.out.println("Ingrediente:" + entry.getKey());
