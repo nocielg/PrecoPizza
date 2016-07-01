@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class Principal {
 
@@ -17,6 +19,8 @@ public class Principal {
 	
 	Pizza pizza3 = new Pizza();
 	pizza3.adicionaIngrediente("requeijao");
+	
+	
 		
 	//Adicionando as pizzas no carrinho de compra
 	CarrinhodeCompras carrinho = new CarrinhodeCompras();
@@ -34,6 +38,12 @@ public class Principal {
 	System.out.printf("Na pizza 2 foram utilizados %d", pizza2.getIngredienteCadaPizza());
 	System.out.printf("Na pizza 3 foram utilizados %d", pizza3.getIngredienteCadaPizza());
 	System.out.println("O total de ingredientes utilizados nas pizzas foi de:" + Pizza.contaIngredientesTodasPizzas);
+	for (Map.Entry<String, Integer> entry : Pizza.listaIngrediente.entrySet()){
+		System.out.println("Ingrediente:" + entry.getKey());
+		System.out.println("Quantidade" + entry.getValue());
 	}
 	
+	}
 }
+	
+

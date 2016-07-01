@@ -1,4 +1,4 @@
-
+//
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +8,7 @@ public class Pizza {
 	public static int contaIngredientesTodasPizzas = 0;
 	
 	// Criando a tabela hash para armazenar os ingredientes da pizza
-	static Map<String,Integer> listaIngrediente = new HashMap<String, Integer>();
+	public static Map<String,Integer> listaIngrediente = new HashMap<String, Integer>();
 	private static int auxiliarValorElemento = 0;
 	private int contaIngredienteCadaPizza = 0;
 	
