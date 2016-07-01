@@ -12,7 +12,7 @@ public class TestePizza {
 		
 	@BeforeClass
 	public static void inicializandoTestes(){
-		//Pizza.zeraRegistro();
+		Pizza.zeraRegistro();
 	}
 		
 	@Test
@@ -26,7 +26,7 @@ public class TestePizza {
 	
 	@Test
 	public void verificaItensAdicionados(){
-		//assertEquals (3, pizza.contaIngredientes);
+		assertEquals (3, pizza.contaIngredientes);
 	}
 	*/
 }

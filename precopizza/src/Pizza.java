@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Pizza {
 
-	private static int contaIngredientesTodasPizzas = 0;
+	public static int contaIngredientesTodasPizzas = 0;
 	
 	// Criando a tabela hash para armazenar os ingredientes da pizza
 	static Map<String,Integer> listaIngrediente = new HashMap<String, Integer>();
@@ -42,13 +42,7 @@ public class Pizza {
 	
 	//Método para contabilizar o preço da pizza
 	public int getPreco(){
-		/*
-		int numeroIngredientes = 0; 
-		//Iterando a tabela hash para contabilizar o número de ingredientes em cada tipo de ingrediente.
-		for(Map.Entry<String, Integer> par: listaIngrediente.entrySet()){
-			numeroIngredientes = numeroIngredientes + par.getValue();
-		}
-		*/
+		
 	if(contaIngredienteCadaPizza<=2 && contaIngredienteCadaPizza>0){
 			
 		return 15;

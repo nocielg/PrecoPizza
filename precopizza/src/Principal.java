@@ -33,6 +33,7 @@ public class Principal {
 	System.out.printf("Na pizza 1 foram utilizados %d", pizza1.getIngredienteCadaPizza());
 	System.out.printf("Na pizza 2 foram utilizados %d", pizza2.getIngredienteCadaPizza());
 	System.out.printf("Na pizza 3 foram utilizados %d", pizza3.getIngredienteCadaPizza());
+	System.out.println("O total de ingredientes utilizados nas pizzas foi de:" + Pizza.contaIngredientesTodasPizzas);
 	}
 	
 }

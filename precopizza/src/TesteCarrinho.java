@@ -4,7 +4,7 @@ import org.junit.Test;
 
 
 public class TesteCarrinho {
-	
+	/*
 	@Test
 	public void testandoAdicaoSemIngrediente() {
 	//	Pizza pizza = new Pizza();
@@ -30,5 +30,5 @@ public class TesteCarrinho {
 		
 		//assertEquals(55, Pizza.precofinalpizzas);
 	}
-
+	*/
 }
