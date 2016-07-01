@@ -17,14 +17,13 @@ public class Principal {
 	
 	Pizza pizza3 = new Pizza();
 	pizza3.adicionaIngrediente("requeijao");
-	
-	
+		
 	//Adicionando as pizzas no carrinho de compra
 	CarrinhodeCompras carrinho = new CarrinhodeCompras();
 	carrinho.adicionaPizzaNoCarrinho(pizza1);
 	carrinho.adicionaPizzaNoCarrinho(pizza2);
 	carrinho.adicionaPizzaNoCarrinho(pizza3);
-		
+			
 	//Imprimindo o número de pizzas no carrinho e o valor total das mesmas
 	System.out.printf("O preço total das pizzas no carrinho é %d",carrinho.retornaValorTotalPrecoPizzasCarrinho());
 	System.out.printf("O numero de pizzas no carrinho é %d", carrinho.retornaNumeroPizzasCarrinho());
